@@ -89,7 +89,7 @@ const Filters = () => {
         />
       </span>
       <Button
-        variant="light"
+        style = {{backgroundColor: "rgb(66,69,90)", borderRadius: "20px" }}
         onClick={() =>
           productDispatch({
             type: "CLEAR_FILTERS",

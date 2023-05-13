@@ -26,6 +26,7 @@ const SingleProduct = ({ prod }) => {
           {cart.some((p) => p.id === prod.id) ? (
             <Button
               variant="danger"
+              style={{borderRadius: "20px"}}
               onClick={() =>
                 dispatch({
                   type: "REMOVE_FROM_CART",
@@ -36,7 +37,7 @@ const SingleProduct = ({ prod }) => {
               Remove from Cart
             </Button>
           ) : (
-            <Button
+            <Button style = {{backgroundColor: "rgb(0,26,255)", borderRadius: "20px"}}
               onClick={() =>
                 dispatch({
                   type: "ADD_TO_CART",

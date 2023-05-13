@@ -29,9 +29,9 @@ const Header = () => {
         {useLocation().pathname.split("/")[1] !== "cart" && (
           <Navbar.Text className="search">
             <FormControl
-              style={{ width: 500 }}
+              style={{ width: 500, borderRadius: "10px", backgroundColor: "rgb(142,140,138)" , color: "rgb(213,212,211)" }}
               type="search"
-              placeholder="Search a product..."
+              placeholder="Search Products Here"
               className="m-auto"
               aria-label="Search"
               onChange={(e) => {
@@ -45,7 +45,7 @@ const Header = () => {
         )}
         <Nav>
           <Dropdown alignRight>
-            <Dropdown.Toggle variant="success">
+            <Dropdown.Toggle style={{ backgroundColor: "rgb(6,199,25)" , borderRadius: "10px"}}>
               <FaShoppingCart color="white" fontSize="25px" />
               <Badge>{cart.length}</Badge>
             </Dropdown.Toggle>
@@ -77,7 +77,7 @@ const Header = () => {
                     </span>
                   ))}
                   <Link to="/cart">
-                    <Button style={{ width: "95%", margin: "0 10px" }}>
+                    <Button style={{ width: "95%", margin: "0 10px", borderRadius: "20px" }}>
                       Go To Cart
                     </Button>
                   </Link>
